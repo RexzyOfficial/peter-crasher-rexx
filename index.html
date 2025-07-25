@@ -111,6 +111,35 @@
             box-shadow: 0 0 30px rgba(0, 100, 255, 0.8);
         }
 
+        .bug-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .bug-card {
+            background: rgba(20, 20, 20, 0.4);
+            border: 1px solid rgba(0, 100, 255, 0.2);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .bug-card.active {
+            background: rgba(0, 50, 100, 0.4);
+            border-color: var(--main);
+            box-shadow: 0 0 15px var(--main);
+        }
+
+        .bug-card i {
+            color: var(--main);
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
         .result-message {
             text-align: center;
             margin: 15px 0;
@@ -167,7 +196,7 @@
 
     <div class="glass-box" id="bug-box" style="display: none;">
         <h1 class="neon-title">
-            <i class="fas fa-terminal"></i> PETER CRASHER
+            <i class="fas fa-terminal"></i> PETER CRASH
         </h1>    
         <input id="target" placeholder="Target WhatsApp Number: 628xxxx" type="text"/>    
         <div class="bug-grid">
